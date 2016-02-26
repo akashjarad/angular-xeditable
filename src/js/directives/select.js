@@ -3,7 +3,7 @@ angular.module('xeditable').directive('editableSelect', ['editableDirectiveFacto
   function(editableDirectiveFactory) {
     return editableDirectiveFactory({
       directiveName: 'editableSelect',
-      inputTpl: '<select></select>',
+      inputTpl: '<select> <option value=\'\'>- Please Choose -</option></select>',
       autosubmit: function() {
         var self = this;
         self.inputEl.bind('change', function() {
